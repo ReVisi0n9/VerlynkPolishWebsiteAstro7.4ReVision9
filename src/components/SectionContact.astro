@@ -1,0 +1,23 @@
+---
+import c from "../content.json";
+---
+
+<section class="section wrap cta" id="contact" aria-labelledby="c-h">
+    <header class="section-head">
+        <span class="note note--ink">{c.contact.span_1}</span>
+        <span class="note">{c.contact.span_2}</span>
+    </header>
+    <h2 class="display cta__title" id="c-h" data-reveal="lines">
+        {c.contact.h2_3}
+    </h2>
+    <div class="cta__actions" data-reveal="up">
+        <a
+            class="btn"
+            href="https://verlynk.com/signup"
+            set:html={c.contact.a_4_html}
+        />
+        <a class="btn btn--ghost" href="https://docs.verlynk.com/">
+            {c.contact.a_5}
+        </a>
+    </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import c from "../content.json";
+import { transformSync } from "esbuild";
+import { createHash } from "node:crypto";
+import rawCss from "../../public/site.css?raw";
+import rawJs from "../../public/site.js?raw";
+const css = transformSync(rawCss, { loader: "css", minify: true }).code;
+const jsVersion = createHash("sha256").update(rawJs).digest("hex").slice(0, 8);
+const { title = c.site.title, description = c.site.description, path = "/", robots = "index, follow, max-image-preview:large, max-snippet:-1" } = Astro.props;
+const canonical = "https://verlynk.pl" + path;
+const ogImage = "https://verlynk.pl/img/Verlynk_social_preview.webp";
+---
+<!doctype html>
+<html lang={c.site.lang}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={canonical}>
+<meta name="robots" content={robots}>
+<meta name="theme-color" content="#F6F2EC">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verlynk">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="Verlynk — agenci AI do social mediów">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+<link rel="icon" href="/img/favicon.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<slot name="head" />
+<script is:inline>(function(d){d.className="js";try{var t=localStorage.getItem("ct-theme");if(t)d.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)d.dataset.theme="dark";localStorage.removeItem("ct-accent");}catch(e){}})(document.documentElement)</script>
+<script is:inline>addEventListener("keydown",function(e){if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();var p=document.querySelector("dialog.palette");if(p){if(p.open)p.close();p.remove();}}},true)</script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/geist-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/geist-mono-latin.woff2" crossorigin>
+<style is:inline set:html={css}></style>
+</head>
+<body>
+<slot />
+<script is:inline src={`/site.js?v=${jsVersion}`} defer></script>
+</body>
+</html>

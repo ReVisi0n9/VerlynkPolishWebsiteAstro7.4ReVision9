@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import SectionFooter from "../components/SectionFooter.astro";
+import c from "../content.json";
+---
+<Base title={c.notfound.seo_title} description={c.notfound.seo_desc} path="/404" robots="noindex, follow">
+<SectionHeader root="/" />
+<main class="section wrap notfound" id="main">
+  <p class="note note--ink" aria-hidden="true">404</p>
+  <h1 class="h1 notfound__title">{c.notfound.h1_1}</h1>
+  <p class="lead notfound__lead">{c.notfound.p_2}</p>
+  <a class="btn notfound__cta" href="/">{c.notfound.a_3} <span class="arrow" aria-hidden="true">→</span></a>
+</main>
+<SectionFooter />
+</Base>

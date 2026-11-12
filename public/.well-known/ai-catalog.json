@@ -1,0 +1,131 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:verlynk:pl:strona-glowna",
+      "displayName": "Verlynk — agenci AI do social mediów",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://verlynk.pl/",
+      "description": "Polskojęzyczna platforma z agentami AI do social mediów: tworzy treści, odpowiada na komentarze i wiadomości, planuje publikacje i pilnuje spójności marki. Plany: Starter 0 PLN, Indywidualny 39 PLN, Zespół 118 PLN miesięcznie.",
+      "representativeQueries": [
+        "Czym jest Verlynk i co potrafi?",
+        "Ile kosztuje Verlynk?",
+        "Jak działają agenci AI do social mediów?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:agents:content-agent",
+      "displayName": "Content Agent",
+      "type": "application/agent-card+json",
+      "url": "https://verlynk.pl/#agenci",
+      "description": "Tworzy posty, kampanie i rolki na podstawie celu lub pomysłu, dobiera grafiki i układa je w kalendarzu o godzinach dopasowanych do odbiorców.",
+      "representativeQueries": [
+        "Jak Verlynk tworzy posty na social media?",
+        "Czy AI może zaplanować tydzień publikacji?",
+        "Jak działa kalendarz treści Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:agents:inbox-agent",
+      "displayName": "Inbox Agent",
+      "type": "application/agent-card+json",
+      "url": "https://verlynk.pl/#agenci",
+      "description": "Inteligentna skrzynka odbiorcza: zbiera komentarze i wiadomości prywatne ze wszystkich kanałów, rozpoznaje intencję i przygotowuje odpowiedzi do akceptacji.",
+      "representativeQueries": [
+        "Jak Verlynk odpowiada na komentarze?",
+        "Czy wszystkie wiadomości mam w jednym miejscu?",
+        "Jak działa inteligentna skrzynka Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:agents:brand-brain",
+      "displayName": "Brand Brain",
+      "type": "application/agent-card+json",
+      "url": "https://verlynk.pl/#agenci",
+      "description": "Pamięć marki: głos, produkty, odbiorcy i zasady. Uczysz raz, a wszyscy agenci Verlynk piszą spójnie z tożsamością marki.",
+      "representativeQueries": [
+        "Jak Verlynk uczy się stylu mojej marki?",
+        "Czym jest Brand Brain?",
+        "Czy AI będzie pisać jak moja marka?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:agents:akceptacje-klientow",
+      "displayName": "Akceptacje klientów",
+      "type": "application/agent-card+json",
+      "url": "https://verlynk.pl/#agenci",
+      "description": "Klienci zatwierdzają lub odrzucają posty jednym kliknięciem w panelu Verlynk, bez korespondencji mailowej i komunikatorów.",
+      "representativeQueries": [
+        "Jak klient akceptuje posty w Verlynk?",
+        "Czy klient musi zakładać konto, żeby zatwierdzić post?",
+        "Jak wygląda proces akceptacji treści?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:pl:polityka-prywatnosci",
+      "displayName": "Polityka prywatności",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://verlynk.pl/polityka-prywatnosci/",
+      "description": "Zasady przetwarzania danych osobowych w Verlynk: administrator, cele, podstawy prawne, odbiorcy, okres przechowywania i prawa użytkowników.",
+      "representativeQueries": [
+        "Jakie dane przetwarza Verlynk?",
+        "Jakie mam prawa do swoich danych w Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:pl:regulamin",
+      "displayName": "Regulamin",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://verlynk.pl/regulamin/",
+      "description": "Regulamin platformy Verlynk: konto, plany i płatności, okres próbny, wypowiedzenie, reklamacje i postanowienia końcowe.",
+      "representativeQueries": [
+        "Jakie są warunki korzystania z Verlynk?",
+        "Jak wypowiedzieć umowę Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:pl:pliki-cookies",
+      "displayName": "Pliki cookies",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://verlynk.pl/pliki-cookies/",
+      "description": "Polityka plików cookies Verlynk: rodzaje cookies, cele ich stosowania oraz zarządzanie nimi w przeglądarce.",
+      "representativeQueries": [
+        "Jakich cookies używa Verlynk?",
+        "Jak wyłączyć pliki cookies?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:pl:zwroty-i-reklamacje",
+      "displayName": "Zwroty i reklamacje",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://verlynk.pl/zwroty-i-reklamacje/",
+      "description": "Zwroty i reklamacje w Verlynk: prawo odstąpienia od umowy, terminy i koszty zwrotu oraz tryb rozpatrywania reklamacji.",
+      "representativeQueries": [
+        "Jak anulować subskrypcję Verlynk?",
+        "Jak zgłosić reklamację w Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:mcp:serwer",
+      "displayName": "Serwer MCP Verlynk",
+      "type": "application/mcp-server-card+json",
+      "url": "https://verlynk.com/api/public/mcp",
+      "description": "Endpoint MCP (Model Context Protocol) Verlynk do integracji z Claude, ChatGPT i Cursor oraz narzędziami zewnętrznymi.",
+      "representativeQueries": [
+        "Jak podłączyć Verlynk do Claude przez MCP?",
+        "Jaki jest adres serwera MCP Verlynk?"
+      ]
+    },
+    {
+      "identifier": "urn:air:verlynk:docs:dokumentacja",
+      "displayName": "Dokumentacja Verlynk",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://docs.verlynk.com/",
+      "description": "Dokumentacja techniczna Verlynk: integracje, protokół MCP, automatyzacje i przewodniki wdrożeniowe.",
+      "representativeQueries": [
+        "Gdzie jest dokumentacja Verlynk?",
+        "Jak zacząć integrację z Verlynk?"
+      ]
+    }
+  ]
+}

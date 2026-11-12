@@ -1,0 +1,169 @@
+---
+import c from "../content.json";
+const { root = "" } = Astro.props;
+---
+
+<a class="skip note" href={root + "#main"}>
+    {c.header.a_1}
+</a>
+<header class="site-header wrap">
+    <a
+        class="brand"
+        href={root + "#start"}
+        aria-label="Verlynk, wróć na początek strony"
+    >
+        <img
+            class="brand__mark brand__logo"
+            src="/img/verlynk-logo.svg"
+            alt=""
+            aria-hidden="true"
+        />
+        <span
+            class="brand__name note note--ink"
+            set:html={c.header.span_5_html}
+        />
+    </a>
+    <nav class="nav" aria-label="Main">
+        <ul>
+            <li>
+                <a class="nav__link" href={root + "#agenci"}>
+                    <span class="note" aria-hidden="true">
+                        {c.header.span_6}
+                    </span>
+                    <span class="nav__label" data-label="Work">
+                        {c.header.span_7}
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav__link" href={root + "#narzedzia"}>
+                    <span class="note" aria-hidden="true">
+                        {c.header.span_8}
+                    </span>
+                    <span class="nav__label" data-label="Services">
+                        {c.header.span_9}
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav__link" href={root + "#aplikacja"}>
+                    <span class="note" aria-hidden="true">
+                        {c.header.span_10}
+                    </span>
+                    <span class="nav__label" data-label="Process">
+                        {c.header.span_11}
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav__link" href={root + "#cennik"}>
+                    <span class="note" aria-hidden="true">
+                        {c.header.span_12}
+                    </span>
+                    <span class="nav__label" data-label="Notes">
+                        {c.header.span_13}
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="tools">
+        <button
+            class="tool"
+            type="button"
+            data-action="theme"
+            aria-label="Toggle light / dark theme"
+        >
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="10" cy="10" r="7.25" />
+                <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" />
+            </svg>
+        </button>
+        <button
+            class="tool tool--menu note"
+            type="button"
+            data-action="menu"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mnav"
+        >
+            {c.header.button_15}
+        </button>
+        <a class="btn header-cta" href="https://verlynk.com/signup">
+            {c.header.a_16}
+        </a>
+    </div>
+    <div class="hd-rule" aria-hidden="true">
+        <span class="hd-rule__fill">
+            <span class="hd-rule__tag note"></span>
+        </span>
+    </div>
+</header>
+<div class="mnav" id="mnav" data-menu aria-hidden="true">
+    <div class="mnav__inner wrap">
+        <div class="mnav__top">
+            <button
+                class="tool"
+                type="button"
+                data-action="theme"
+                aria-label="Toggle light / dark theme"
+            >
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.25" />
+                    <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" />
+                </svg>
+            </button>
+            <button
+                class="tool"
+                type="button"
+                data-action="menu"
+                aria-label="Close menu"
+            >
+                <span class="mnav__x" aria-hidden="true">
+                    ✕
+                </span>
+            </button>
+        </div>
+        <nav class="mnav__nav" aria-label="Menu">
+            <ul>
+                <li>
+                    <a class="mnav__link" href={root + "#agenci"}>
+                        <span class="note" aria-hidden="true">
+                            {c.header.span_6}
+                        </span>
+                        <span>{c.header.span_7}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="mnav__link" href={root + "#narzedzia"}>
+                        <span class="note" aria-hidden="true">
+                            {c.header.span_8}
+                        </span>
+                        <span>{c.header.span_9}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="mnav__link" href={root + "#aplikacja"}>
+                        <span class="note" aria-hidden="true">
+                            {c.header.span_10}
+                        </span>
+                        <span>{c.header.span_11}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="mnav__link" href={root + "#cennik"}>
+                        <span class="note" aria-hidden="true">
+                            {c.header.span_12}
+                        </span>
+                        <span>{c.header.span_13}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a
+            class="btn mnav__cta"
+            href={"https://verlynk.com/signup"}
+            set:html={c.header.a_16}
+        />
+    </div>
+</div>

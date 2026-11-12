@@ -1,0 +1,47 @@
+# Verlynk
+
+> Verlynk to polskojęzyczna platforma z agentami AI do social mediów. Tworzy treści, odpowiada na komentarze i wiadomości, planuje publikacje i pilnuje spójności marki — zawsze za akceptacją człowieka. Szkice są domyślne: nic nie publikuje się bez Twojej zgody.
+
+## Strony serwisu
+
+- [Strona główna](https://verlynk.pl/): agenci AI, cennik, FAQ i aplikacja mobilna
+- [Polityka prywatności](https://verlynk.pl/polityka-prywatnosci/): zasady przetwarzania danych osobowych
+- [Regulamin](https://verlynk.pl/regulamin/): zasady korzystania z platformy, plany i płatności
+- [Pliki cookies](https://verlynk.pl/pliki-cookies/): rodzaje i cele plików cookies oraz zarządzanie nimi
+- [Zwroty i reklamacje](https://verlynk.pl/zwroty-i-reklamacje/): odstąpienie od umowy, zwroty i reklamacje
+
+## Agenci i funkcje
+
+- Content Agent: podajesz cel lub pomysł, a agent pisze posty, kampanie i rolki, dobiera grafiki i układa je w kalendarzu o najlepszych godzinach.
+- Inbox Agent (Inteligentna Skrzynka): komentarze i wiadomości prywatne ze wszystkich kanałów w jednym miejscu; agent rozpoznaje intencję i przygotowuje odpowiedzi do akceptacji.
+- Brand Brain (Brand Agent): pamięć marki — głos, produkty, odbiorcy i zasady. Uczysz raz, a każdy agent pisze spójnie.
+- Akceptacje klientów: klient zatwierdza lub odrzuca posty jednym kliknięciem w panelu, bez mailowego ping-ponga.
+- Protokół MCP: Verlynk łączy się z Claude, ChatGPT i Cursor oraz narzędziami takimi jak CRM czy sklep e-commerce i wykonuje akcje w Twoim imieniu.
+- Aplikacja mobilna: zarządzanie marką z telefonu na iOS i Androidzie — szkice AI, akceptacje i komentarze z dowolnego miejsca.
+
+## Wspierane platformy
+
+Instagram, Facebook, TikTok, LinkedIn, X, YouTube, Pinterest, Threads, Bluesky i Mastodon — wszystkie z jednego panelu.
+
+## Cennik (PLN, miesięcznie)
+
+- Starter — 0 PLN: 1 marka, do 5 kanałów, treści i grafiki AI, kalendarz i publikacja.
+- Indywidualny — 39 PLN: 3 marki, wszystkie kanały, automatyczna skrzynka i wskaźniki Social Health, moduł akceptacji dla klientów i podział ról w zespole.
+- Zespół — 118 PLN: nielimitowane marki i kanały, integracja MCP dla Claude, ChatGPT i Cursor, priorytetowe wsparcie techniczne.
+- Każde nowe konto otrzymuje 3-dniowy pełny dostęp próbny; subskrypcję można anulować w dowolnym momencie.
+
+## Najczęstsze pytania
+
+Pełne FAQ wraz z odpowiedziami znajduje się na stronie głównej: https://verlynk.pl/#faq
+
+## Dla agentów i deweloperów
+
+- Mapa strony: https://verlynk.pl/sitemap.xml
+- Katalog AI: https://verlynk.pl/ai-catalog.json
+- Serwer MCP: https://verlynk.com/api/public/mcp
+- Dokumentacja: https://docs.verlynk.com/
+
+## Kontakt
+
+- Wsparcie: support@verlynk.com
+- Pomoc: https://verlynk.com/help

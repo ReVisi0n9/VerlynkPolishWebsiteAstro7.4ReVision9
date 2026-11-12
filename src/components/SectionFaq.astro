@@ -1,0 +1,15 @@
+---
+import c from "../content.json";
+const items = Array.from({ length: 10 }, (_, i) => ({ h: c.faq["h3_" + (2 + i * 2)], p: c.faq["p_" + (3 + i * 2)] }));
+---
+<section class="section wrap" id="faq" aria-labelledby="faq-h">
+  <h2 class="h2" id="faq-h" data-reveal="lines">{c.faq.h2_1}</h2>
+  <div class="acc">
+    {items.map((it) => (
+      <details class="acc__item" name="faq" data-reveal="up">
+        <summary><span>{it.h}</span></summary>
+        <p class="acc__body">{it.p}</p>
+      </details>
+    ))}
+  </div>
+</section>

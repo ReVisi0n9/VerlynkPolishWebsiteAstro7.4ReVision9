@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import SectionFooter from "../components/SectionFooter.astro";
+import c from "../content.json";
+const items = Array.from({ length: 7 }, (_, i) => ({ h: c.returns["h2_" + (3 + i * 2)], p: c.returns["p_" + (4 + i * 2)] }));
+---
+<Base title={c.returns.seo_title} description={c.returns.seo_desc} path="/zwroty-i-reklamacje/">
+<SectionHeader root="/" />
+<main class="section wrap" id="main">
+  <h1 class="h1 privacy__title" data-reveal="lines">{c.returns.h1_1}</h1>
+  <p class="lead privacy__lead" data-reveal="up">{c.returns.p_2}</p>
+  <div class="acc">
+    {items.map((it) => (
+      <details class="acc__item" name="zwroty" data-reveal="up">
+        <summary><span>{it.h}</span></summary>
+        <p class="acc__body">{it.p}</p>
+      </details>
+    ))}
+  </div>
+</main>
+<SectionFooter />
+</Base>

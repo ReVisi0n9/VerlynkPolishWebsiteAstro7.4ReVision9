@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import SectionTop from "../components/SectionTop.astro";
+import SectionApproach from "../components/SectionApproach.astro";
+import SectionWork from "../components/SectionWork.astro";
+import SectionServices from "../components/SectionServices.astro";
+import SectionProcess from "../components/SectionProcess.astro";
+import SectionApp from "../components/SectionApp.astro";
+import SectionNotes from "../components/SectionNotes.astro";
+import SectionFaq from "../components/SectionFaq.astro";
+import SectionContact from "../components/SectionContact.astro";
+import SectionFooter from "../components/SectionFooter.astro";
+import c from "../content.json";
+const strip = (s) => String(s).replace(/^\d+\.\s*/, "").trim();
+const faqItems = Array.from({ length: 10 }, (_, i) => ({
+  q: strip(c.faq["h3_" + (2 + i * 2)]),
+  a: String(c.faq["p_" + (3 + i * 2)]).trim(),
+}));
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://verlynk.pl/#organizacja",
+      name: "Verlynk",
+      url: "https://verlynk.pl/",
+      logo: "https://verlynk.pl/img/verlynk-logo.svg",
+      description: c.site.description,
+      email: "support@verlynk.com",
+      sameAs: [
+        "https://www.instagram.com/verlynk_offl",
+        "https://www.facebook.com/profile.php?id=61552769455110",
+        "https://www.linkedin.com/company/verlynk-com/",
+        "https://www.youtube.com/@verlynk",
+        "https://x.com/verlynk_ofcl",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://verlynk.pl/#strona",
+      url: "https://verlynk.pl/",
+      name: "Verlynk",
+      inLanguage: "pl-PL",
+      publisher: { "@id": "https://verlynk.pl/#organizacja" },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://verlynk.pl/#aplikacja",
+      name: "Verlynk",
+      url: "https://verlynk.pl/",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web, iOS, Android",
+      inLanguage: "pl-PL",
+      description: c.site.description,
+      offers: [
+        { "@type": "Offer", name: "Starter", price: "0", priceCurrency: "PLN" },
+        { "@type": "Offer", name: "Indywidualny", price: "39", priceCurrency: "PLN" },
+        { "@type": "Offer", name: "Zespół", price: "118", priceCurrency: "PLN" },
+      ],
+      featureList: [
+        "Content Agent — tworzenie postów, kampanii i rolek AI",
+        "Inbox Agent — inteligentna skrzynka komentarzy i wiadomości",
+        "Brand Brain — pamięć marki: głos, produkty i zasady",
+        "Akceptacje klientów jednym kliknięciem",
+        "Integracja MCP dla Claude, ChatGPT i Cursor",
+        "Aplikacje mobilne iOS i Android",
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://verlynk.pl/#faq",
+      url: "https://verlynk.pl/",
+      inLanguage: "pl-PL",
+      mainEntity: faqItems.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+---
+<Base>
+<Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(schema)} /></Fragment>
+<SectionHeader />
+<main id="main" tabindex="-1">
+<SectionTop />
+<SectionApproach />
+<SectionWork />
+<SectionServices />
+<SectionProcess />
+<SectionApp />
+<SectionNotes />
+<SectionFaq />
+<SectionContact />
+</main>
+<SectionFooter />
+</Base>

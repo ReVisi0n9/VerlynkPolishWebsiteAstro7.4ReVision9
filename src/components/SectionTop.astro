@@ -1,0 +1,47 @@
+---
+import c from "../content.json";
+---
+
+<section class="hero wrap" id="start" data-hero>
+    <div class="hero__top note">
+        <span>{c.top.span_1}</span>
+        <span class="hide-sm">{c.top.span_2}</span>
+        <span>{c.top.span_3}</span>
+    </div>
+    <h1 class="hero__title">
+        <span class="hero__human display" data-hero-human data-bp="Kto?">
+            {c.top.span_4}
+        </span>
+        <span
+            class="hero__machine h2"
+            data-hero-generate
+            data-bp="Co możemy dla Ciebie zrobić?"
+        >
+            {c.top.span_5}
+        </span>
+    </h1>
+    <div class="hero__notes">
+        <p class="note" data-hero-fade set:html={c.top.p_6_html} />
+        <p class="note" data-hero-fade set:html={c.top.p_7_html} />
+        <p
+            class="note hero__terrain"
+            aria-hidden="true"
+            set:html={c.top.p_8_html}
+        />
+    </div>
+    <div class="hero__foot">
+        <p class="hero__intro lead" data-hero-fade data-bp="Twoja marka z AI">
+            {c.top.p_9}
+        </p>
+        <div class="hero__ctas" data-hero-fade data-bp="Przekonaj się">
+            <a
+                class="btn"
+                href="https://verlynk.com/signup"
+                set:html={c.top.a_10_html}
+            />
+            <a class="btn btn--ghost" href="#cennik">
+                {c.top.a_11}
+            </a>
+        </div>
+    </div>
+</section>

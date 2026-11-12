@@ -1,0 +1,23 @@
+---
+import c from "../content.json";
+---
+<section class="section wrap" id="app" aria-labelledby="app-h">
+  <div class="app grid-12">
+    <div class="app__text">
+      <h2 class="h2" id="app-h" data-reveal="lines">{c.app.h2_1}</h2>
+      <p class="lead app__lead" data-reveal="up">{c.app.p_2}</p>
+      <ul class="app__list">
+        <li data-reveal="up">{c.app.li_3}</li>
+        <li data-reveal="up">{c.app.li_4}</li>
+        <li data-reveal="up">{c.app.li_5}</li>
+      </ul>
+      <div class="app__badges" data-reveal="up">
+        <a href={c.app.a_9} target="_blank" rel="noopener"><img src={"/" + c.app.img_7_image} alt={c.app.alt_7} width="120" height="40" loading="lazy" decoding="async"></a>
+        <a href={c.app.a_10} target="_blank" rel="noopener"><img src={"/" + c.app.img_8_image} alt={c.app.alt_8} width="180" height="53" loading="lazy" decoding="async"></a>
+      </div>
+    </div>
+    <div class="app__media" data-reveal="up">
+      <img src={"/" + c.app.img_6_image} alt={c.app.alt_6} width="431" height="755" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
